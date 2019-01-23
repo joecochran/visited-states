@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Where have you been?</h1>
+    <USMap />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import USMap from './components/USMap.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    USMap,
   }
 }
 </script>
 
 <style>
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  max-width: 959px;
+  margin: 0 auto;
+}
+
+.state path,
+.state circle {
+  fill: #D5D9DE;
+}
+.state path:hover,
+.state circle:hover {
+  fill: #A0A5AB;
+  cursor: pointer;
+}
+.state path.selected,
+.state circle.selected {
+  fill: #35B4C6;
 }
 </style>
